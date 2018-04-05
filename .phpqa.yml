@@ -1,0 +1,6 @@
+tool:
+    phpmnd: MacFJA\PHPQAExtensions\Tools\Analyzer\PhpMagicNumber
+    phpa: MacFJA\PHPQAExtensions\Tools\Analyzer\PhpAssumptions
+report:
+    phpmnd: vendor/macfja/phpqa-extensions/app/report/phpmagicnumber.xsl
+    phpa: vendor/macfja/phpqa-extensions/app/report/phpassumptions.xsl

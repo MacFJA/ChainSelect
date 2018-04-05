@@ -1,0 +1,41 @@
+{
+  "name": "macfja/chain-select",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "MacFJA"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MacFJA\\ChainSelect\\": "lib/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MacFJA\\ChainSelect\\Tests\\": "tests/",
+      "MacFJA\\ChainSelect\\Tests\\Functional\\": "tests/functional/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5",
+    "infection/infection": "^0.8.1",
+    "edgedesign/phpqa": "^1.18",
+    "macfja/phpqa-extensions": "^0.1",
+    "povils/phpmnd": "^2.0",
+    "rskuipers/php-assumptions": "^0.7.0",
+    "phpstan/phpstan": "^0.9.2",
+    "jakub-onderka/php-parallel-lint": "^1.0",
+    "jakub-onderka/php-console-highlighter": "^0.3.2",
+    "vimeo/psalm": "^1.0"
+  },
+  "require": {
+    "php": "7.*"
+  },
+  "scripts": {
+    "tests": [
+      "phpqa --tools=phploc,phpcpd:0,phpcs:0,pdepend,phpmd:0,phpmetrics,parallel-lint:0,phpa:1,phpmnd:3,phpstan:0,psalm:1,phpunit:0 --report --analyzedDirs=lib",
+      "infection --only-covered"
+    ]
+  }
+}
